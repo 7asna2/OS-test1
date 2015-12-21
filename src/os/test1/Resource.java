@@ -40,7 +40,7 @@ public class Resource {
             return true;
         }
     }
-    
+    //  release method 
     public int getNumofCurrentUsed (){
         return this.numofCurrentUsed;
     }

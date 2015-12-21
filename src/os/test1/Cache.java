@@ -64,7 +64,7 @@ public class Cache {
    
     public void printinfo (){
         for(int i=0 ; i<size ; i++){
-            System.out.println("process :"+i+caschedProcess[i].getProcessName());
+            System.out.println("process block:"+i+"process name:"+caschedProcess[i].getProcessName());
             System.out.print("  frq:"+frequency[i]);
             System.out.println("    rec:"+recently[i]);
             
@@ -84,7 +84,7 @@ public class Cache {
             if(policy.equals("LFU"))
                 LFU(newProcess);
             } 
-            else System.out.println("you can add process");
+            
         }
         //for test when hit print hit
         else System.out.println("hit");
@@ -107,7 +107,7 @@ public class Cache {
              frequency[size]++;
              recently[size]=numofProcess++;
              size++;
-             System.out.println("new process added in "+(size-1) );
+             System.out.println("new process added in "+(size-1)+"block" );
             return true; 
          }
        
@@ -116,7 +116,8 @@ public class Cache {
          
      
      private void FIFO (Process newProcess){      //add process using First In First Out (FIFO)Raplacement algorithm
-        Process temp = q.poll();
+         System.out.println("FIFO is used to replace.....");
+         Process temp = q.poll();
         q.add(newProcess);
         for(int i=0 ; i<capacity ;i++){
             if(this.caschedProcess[i]==temp)
@@ -125,6 +126,7 @@ public class Cache {
     }
     
       private void LRU (Process newProcess) {      //add process using Least Recently Used (LRU)Raplacement algorithm
+          System.out.println("LRU is used to replace.....");
          int minr=Integer.MAX_VALUE,minpindx=0;
           for(int i=0 ; i<capacity ; i++){
               if(recently[i]<minr){
