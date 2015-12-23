@@ -1,6 +1,3 @@
-package os.test1;
-
-
 import java.util.ArrayList;
 public class Directory {
     ArrayList<String> directory ;

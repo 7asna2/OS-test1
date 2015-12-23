@@ -1,6 +1,3 @@
-package os.test1;
-
-
 import java.util.ArrayList;
 
 public class folder extends MyType{
@@ -16,9 +13,10 @@ public class folder extends MyType{
     
     public folder(folder parent,String name){
         super.setName(name);
-        setParent(parent);
-        setDirectory(name);
-        parent.inFolder.add(this);
+        super.setParent(parent);
+        super.setDirectory(name);
+        super.getParent().inFolder.add(this);
+        
     }
     
 }
