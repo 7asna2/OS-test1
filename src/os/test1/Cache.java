@@ -74,6 +74,7 @@ public class Cache {
         /*if empty cache */
         if (! tryHit( newProcess )){
             //for miss print miss
+            
             System.out.println("miss");
             if( !addProcess(newProcess)){
                 System.out.println("need to replace ");

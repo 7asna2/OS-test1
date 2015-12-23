@@ -14,7 +14,7 @@ public class OSTest1 {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String[] args) {
+ //  public static void main(String[] args) {
 //        Cache c=new Cache ("FIFO");
 //        Process p1=new Process("1");
 //        Process p2=new Process("2");
@@ -31,6 +31,8 @@ public class OSTest1 {
 //        c.readRequest(p1);
 //        c.readRequest(p5);
 //        c.printinfo();
+//__________________________________________________________________________________    
+
         
     }
     

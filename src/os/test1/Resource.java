@@ -11,9 +11,11 @@ package os.test1;
  */
 public class Resource {
     String name;
+    int id;
     int size;
     int numofCurrentUsed;
     Process []  currentUsed= new Process[size+1];
+   
     public Resource(String name){
         this.name=name;
         this.size=Integer.MAX_VALUE;
